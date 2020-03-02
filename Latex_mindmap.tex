@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{mindmap}
+
+\usepackage{xltxtra}
+\usepackage{xgreek}
+
+\setmainfont{Times New Roman}
+
+
+\pagestyle{empty}
+\begin{document}
+
+\begin{tikzpicture}[mindmap, grow cyclic, every node/.style=concept,
+concept color=orange!40, rotate=-90,
+	level 1/.append style={level distance=4.5cm, sibling angle=72},
+	level 2/.append style={level distance=2.8cm, sibling angle=45}]
+
+\node{Φυσική Γ' Λυκείου}
+	child [concept color=blue!30] { node {Κρούσεις}
+		child { node {Ελαστική}}
+		child { node {Πλαστική}}
+		child { node {Πλάγια}}
+	}
+	child [concept color=purple!30] { node {Ταλαντώσεις}
+		child { node {Γραμική Αρμονική}}
+		child { node {Φθίνουσα}}
+		child { node {Εξαναγκασμένη}}
+		child { node {Σύνθεση ταλαντώσεων}}
+	}
+	child [concept color=teal!30] { node {Στερεό}
+		child { node {Ροπή δύναμης}}
+		child { node {Ισορροπία στερεού}}
+		child { node {Ροπή αδράνειας}}
+		child { node {Στροφορμή}}
+		child { node {Ενέργεια}}
+	}
+	child [concept color=green!40] { node {Ρευστά}
+		child { node {Αρχή του Pascal}}
+		child { node {Εξίσωση συνέχειας}}
+		child { node {Εξίσωση Bernoulli}}
+	}
+	child [concept color=yellow!50] { node {Ηλεκτρομαγνητισμός}
+		child { node {Ρευματοφόροι αγωγοί}}
+		child { node {Δύναμη Laplace}}
+		child { node {Επαγωγή}}
+		child { node {Εναλλασσόμενα}}
+	};
+\end{tikzpicture}
+\end{document}
