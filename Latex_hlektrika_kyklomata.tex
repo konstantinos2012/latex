@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[siunitx]{circuitikz}
+
+%\usepackage{tikz}
+%\usetikzlibrary{mindmap}
+%\usepackage{xltxtra}
+%\usepackage{xgreek}
+%\setmainfont{Times New Roman}
+%\pagestyle{empty}
+
+\begin{document}
+
+
+\begin{circuitikz} \draw
+(0, 5) to[battery] (0, 0) to[ammeter,l=200<\m\ampere>, color=red] (5, 0)
+to[lamp] (5, 5)
+to[switch] (0, 5)
+(5, 0.5) -- (7, 0.5)
+to[switch] (7, 2.0) to[R] (7, 4.5) -- (5, 4.5)
+(0, 0.5) -- (-2, 0.5)
+to[voltmeter,l=20<\volt>, color=red] (-2, 4.5) -- (0, 4.5)
+;
+\end{circuitikz}
+
+
+\end{document}
